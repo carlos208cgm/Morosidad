@@ -17,8 +17,8 @@ def eval_model(filename):
     model = pickle.load(open(package, 'rb'))
     print('Modelo importado correctamente')
     # Predecimos sobre el set de datos de validación 
-    X_test = df.drop(['DEFAULT'],axis=1)
-    y_test = df[['DEFAULT']]
+    X_test = df.drop(['TIPOCONTACTO'],axis=1)
+    y_test = df[['TIPOCONTACTO']]
     y_pred_test=model.predict(X_test)
     # Generamos métricas de diagnóstico
     cm_test = confusion_matrix(y_test,y_pred_test)
