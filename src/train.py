@@ -21,7 +21,7 @@ def read_file_csv(filename):
 
 # Entrenamiento completo
 def main():
-    read_file_csv('credit_train.csv')
+    read_file_csv('Morosidad_train.csv')
     print('Finalizó el entrenamiento del Modelo')
 
 if __name__ == "__main__":
