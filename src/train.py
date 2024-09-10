@@ -6,7 +6,7 @@ import pickle
 import os
 
 def read_file_csv(filename):
-    df = pd.read_csv(os.path.join('../data/processed', filename))
+    df = pd.read_csv(os.path.join('../data/processed', filename), sep = ';')
     X_train = df.drop(['TIPOCONTACTO'],axis=1)
     y_train = df[['TIPOCONTACTO']]
     print(filename, ' cargado correctamente')

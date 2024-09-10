@@ -10,7 +10,7 @@ import os
 
 # Cargar la tabla transformada
 def eval_model(filename):
-    df = pd.read_csv(os.path.join('../data/processed', filename))
+    df = pd.read_csv(os.path.join('../data/processed', filename), sep = ';')
     print(filename, ' cargado correctamente')
     # Leemos el modelo entrenado para usarlo
     package = '../models/best_model.pkl'
